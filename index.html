@@ -3,55 +3,54 @@
 <head>
     <title>Web Audio API</title>
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="assets/scripts/jquery-3.0.0.min.js"></script>
+<script src="assets/scripts/controls.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 <script src="assets/scripts/app.js"></script>
 <body>
-<canvas class="visualizer" width="640" height="100"></canvas>
-<h1>Welcome to the Web Audio API
-    <h2>Web Audio Api Equalizer</h2>
+<canvas class="visualizer" width="640" height="600"></canvas>
     <div class="eq">
-        <div class="controls">
+        <div  class="controls active first" class="controls">
             <label>60Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'sixty');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="sixty"></input>
         </div>
         <div class="controls">
             <label>170Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'oneSeventy');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="oneSeventy"></input>
         </div>
         <div class="controls">
             <label>310Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'threeTen');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="threeTen"></input>
         </div>
         <div class="controls">
             <label>450Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'fourFifty');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="fourFifty"></input>
         </div>
         <div class="controls">
             <label>600Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'sixHundred');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="sixHundred"></input>
         </div>
         <div class="controls">
             <label>1000Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'oneKay');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="oneKay"></input>
         </div>
         <div class="controls">
             <label>2000Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'twoKay');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="twoKay"></input>
         </div>
         <div class="controls">
             <label>4000Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'fourKay');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="fourKay"></input>
         </div>
         <div class="controls">
             <label>6000Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'sixKay');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="sixKay"></input>
         </div>
-        <div class="controls">
+        <div class="controls last">
             <label>10000Hz</label>
-            <input type="range" value="0" step="0.5" min="-200" max="200" oninput="changeGain(this.value, 'tenKay');"></input>
+            <input type="range" value="0" step="0.5" min="-1000" max="200" name="tenKay"></input>
         </div>
     </div>
-    <h3>André Michelle <a href="www.audiotool.com/track/volution/">Volution</a></h3>
     <audio id="player" controls crossorigin>
         <source src="http://api.audiotool.com/track/volution/play.mp3" type="audio/mpeg">
         <source src="http://api.audiotool.com/track/volution/play.ogg" type="audio/ogg">
